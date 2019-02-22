@@ -1260,14 +1260,64 @@ label:hover {
   left: 190px;
 }
 
-.drills {
+.slider {
+  position: relative;
   font-size: 36px;
   font-weight: bold;
-  background-image: url('../img/muzhik.jpg');
+  /*background-color: #94842c;*/
   width: 620px;
   height: 266px;
   padding-top: 25px;
   position: relative;
+  overflow: hidden;
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.slider-controls {
+  position: absolute;
+  z-index: 2;
+  left: 47%;
+  bottom: 33px;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider-controls label {
+  display: inline-block;
+  margin: 0 2px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  border: 2px solid white;
+  background: white;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background: #ee3643;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-620px);
+}
+
+.slider-slides img {
+  width: 620px;
+  height: 266px;
+  float: left;
+}
+
+.slider-slides {
+  width: 200%;
 }
 
 .drills::after {
