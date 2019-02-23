@@ -1264,7 +1264,7 @@ label:hover {
   position: relative;
   font-size: 36px;
   font-weight: bold;
-  /*background-color: #94842c;*/
+  background-color: #94842c;
   width: 620px;
   height: 266px;
   padding-top: 25px;
@@ -1320,14 +1320,41 @@ label:hover {
   width: 200%;
 }
 
-.drills::after {
+.drills-slider {
+  position: relative;
+}
+
+.drills-slider::before {
+  content: 'ДРЕЛИ';
+  position: absolute;
+  font-size: 36px;
+  font-weight: 400;
+  top: 25px;
+  left: 25px;
+  z-index: 3;
+  letter-spacing: 0.7px;
+}
+
+.drills-slider::after {
   content: 'Соседям на радость!';
   position: absolute;
   font-size: 18px;
   font-weight: 400;
   top: 57px;
   left: 25px;
+  z-index: 3;
 }
+
+/*
+.slider-slides::after {
+  content: 'Соседям на радость!';
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  top: 57px;
+  left: 25px;
+  z-index: 3;
+}*/
 
 .for-icons::before {
   content: '';
@@ -1336,6 +1363,7 @@ label:hover {
   height: 3px;
   width: 27px;
   top: 122px;
+  left: 22px;
   z-index: 2;
   transform: rotate(-45deg);
 }
@@ -1347,6 +1375,7 @@ label:hover {
   height: 3px;
   width: 27px;
   top: 140px;
+  left: 22px;
   z-index: 2;
   transform: rotate(45deg);
 }
@@ -1356,7 +1385,7 @@ label:hover {
   background: #ffffff;
   height: 3px;
   width: 27px;
-  right: 20px;
+  right: 18px;
   top: 140px;
   z-index: 2;
   transform: rotate(-45deg);
@@ -1367,18 +1396,46 @@ label:hover {
   background: #ffffff;
   height: 3px;
   width: 27px;
-  right: 20px;
+  right: 18px;
   top: 122px;
   z-index: 2;
   transform: rotate(45deg);
 }
-.for-drills {
+.for-slider {
   position: absolute;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
   padding: 12px 45px 12px 49px;
   top: 205px;
   left: 25px;
   bottom: 22px;
+  z-index: 2;
+}
+
+.perforators-slider {
+  position: relative;
+}
+
+.perforators-slider::before {
+  content: 'ПЕРФОРАТОРЫ';
+  position: absolute;
+  font-size: 36px;
+  font-weight: 400;
+  top: 25px;
+  left: 25px;
+  z-index: 3;
+  letter-spacing: 0.7px;
+}
+
+.perforators-slider::after {
+  content: 'Настоящие мужские игрушки';
+  position: absolute;
+  font-size: 18px;
+  font-weight: 400;
+  top: 57px;
+  left: 25px;
+  z-index: 3;
 }
 
 .column {
