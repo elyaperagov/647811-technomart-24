@@ -93,16 +93,17 @@
             <label for="btn-1"></label>
             <label for="btn-2"></label>
           </div>
-          <div class="slider-inner">
-            <div class="slider-slides">
-              <div class="drills-slider">
-                <img src="img/slider-1.jpg" alt="техномарт-дрели">
+          <!-- ==== SLIDER ==== -->
+          <div class="slider-slides">
+              <div class="slide slide-1">
+                <div class="slide-title">Перфораторы</div>
+                <div class="slide-sub-title">Настоящие мужские игрушки</div>
               </div>
-              <div class="perforators-slider">
-                <img src="img/slider-2.jpg" alt="техномарт-перфораторы">
+              <div class="slide slide-2">
+                <div class="slide-title">Дрели</div>
+                <div class="slide-sub-title">Соседям на радость!</div>
               </div>
-        </div>
-      </div>
+            </div>
         </li>
         <li>
           <ul class="column">
@@ -247,17 +248,28 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="all-services">
           <ul class="services-list">
-            <li class="services-item"><a href="#">Доставка</a></li>
-            <li class="services-item"><a href="#">Гарантия</a></li>
-            <li class="services-item"><a href="#">Кредит</a></li>
+            <li class="services-item delivery-link services-not-active"><a href="#">Доставка</a></li>
+            <li class="services-item guaranty-link services-not-active"><a href="#">Гарантия</a></li>
+            <li class="services-item credit-link services-active"><a href="#">Кредит</a></li>
           </ul>
-          <div class="delivery-services">
+          <div class="delivery-services services-hidden">
             <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо<br>
+            <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо<br>
              к вашему подъезду совершенно бесплатно!<br>
              Ведь мы неплохо заработаем,<br>
              поднимая его на ваш этаж!</p>
            </div>
+          <div class="guaranty-services services-hidden">
+             <h3>Гарантия</h3>
+             <p class="guaranty-text">Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара,
+             спровоцированного его возгаранием, <br>вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>сгоревший
+             товар на новый.<br>Дом уж восстановите как-нибудь сами.</p>
+           </div>
+            <div class="credit-services services-shown">
+              <h3>Кредит</h3>
+              <p class="credit-text">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
+              <button class="red-button send-request">Отправить заявку</button>
+            </div>
          </div>
        </div>
      </div>

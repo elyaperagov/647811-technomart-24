@@ -1264,7 +1264,6 @@ label:hover {
   position: relative;
   font-size: 36px;
   font-weight: bold;
-  background-color: #94842c;
   width: 620px;
   height: 266px;
   padding-top: 25px;
@@ -1303,23 +1302,49 @@ label:hover {
   background: #ee3643;
 }
 
-#btn-1:checked ~ .slider-inner .slider-slides {
+#btn-1:checked ~  .slider-slides {
   transform: translate(0);
 }
-#btn-2:checked ~ .slider-inner .slider-slides {
+#btn-2:checked ~  .slider-slides {
   transform: translate(-620px);
-}
-
-.slider-slides img {
-  width: 620px;
-  height: 266px;
-  float: left;
 }
 
 .slider-slides {
   width: 200%;
+  display: flex;
 }
 
+.slide {
+    width: 620px;
+    height: 266px;
+    padding: 25px;
+}
+.slide-1 {
+    background-image: url('../img/slider-2.jpg');
+    background-color: #94842c;
+}
+
+.slide-2 {
+    background-image: url('../img/slider-1.jpg');
+    background-color: #307498;
+}
+.slide-title {
+    font-size: 36px;
+    font-weight: 400;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+    letter-spacing: 0.7px;
+}
+.slide-sub-title {
+    font-size: 18px;
+    font-weight: 400;
+    top: 57px;
+    left: 25px;
+}
+
+
+/*
 .drills-slider {
   position: relative;
 }
@@ -1344,7 +1369,7 @@ label:hover {
   left: 25px;
   z-index: 3;
 }
-
+*/
 /*
 .slider-slides::after {
   content: 'Соседям на радость!';
@@ -1412,7 +1437,7 @@ label:hover {
   bottom: 22px;
   z-index: 2;
 }
-
+/*
 .perforators-slider {
   position: relative;
 }
@@ -1436,7 +1461,7 @@ label:hover {
   top: 57px;
   left: 25px;
   z-index: 3;
-}
+}*/
 
 .column {
   display: flex;
@@ -1550,15 +1575,15 @@ label:hover {
   padding-left: 5px;
   padding-bottom: 5px;
 }
-
+/*---СЕРВИСЫ---*/
 .information p {
   font-family: 'PT Sans', Arial, sans-serif;
   padding: 14px 0;
-  letter-spacing: 0.04px;
 }
 
 .services-desc {
   margin-top: 14px;
+  letter-spacing: 0.04px;
 }
 
 .services-wrapper {
@@ -1576,6 +1601,14 @@ label:hover {
   display: flex;
   flex-direction: row;
 }
+
+.all-services h3 {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  letter-spacing: 0.5px;
+}
+
 .services-list {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
@@ -1601,26 +1634,42 @@ label:hover {
 .services-item {
   padding: 16px 22px 19px;
   background: #32425c;
-  border-bottom: 1px solid #405069;
   cursor: pointer;
 }
-
+/*
 .services-list li:nth-child(2) {
   padding: 18px 22px 20px;
+}*/
+
+
+.services-active {
+  background-color: #fff;
+  box-shadow: none;
 }
 
-.services-item:hover {
-  background-color: #293449;
-}
-
-.services-item:active {
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-}
-.services-item:active a {
+.services-active a{
   color: #32425c;
 }
 
+.services-not-active {
+  color: #fff;
+  background-color: #32425c;
+  box-shadow: inset 0 -1px #293449;
+}
+
+.services-not-active:hover {
+  background-color: #293449;
+}
+
+.services-hidden {
+  display: none;
+}
+
+.services-shown {
+  display: block;
+}
+
+/*---ДОСТАВКА---*/
 .delivery-services {
   margin-left: 80px;
   margin-top: 40px;
@@ -1630,12 +1679,42 @@ label:hover {
   width: 830px;
   padding-bottom: 97px;
 }
+/*---ГАРАНТИЯ---*/
+.guaranty-services {
+  margin-left: 75px;
+  margin-top: 27px;
+  background-image: url('../img/guaranty.png');
+  background-repeat: no-repeat;
+  background-position: 245px 18px;
+  width: 830px;
+  padding-bottom: 97px;
+}
 
-.delivery-services h3 {
-  font-size: 36px;
-  line-height: 36px;
-  color: #32425c;
-  letter-spacing: 0.5px;
+.guaranty-services h3 {
+  letter-spacing: 3.4px;
+}
+/*---КРЕДИТ---*/
+.credit-services {
+  margin-left: 82px;
+  margin-top: 42px;
+  background-image: url('../img/credit.png');
+  background-repeat: no-repeat;
+  background-position: 165px 0px;
+  width: 830px;
+  padding-bottom: 97px;
+}
+
+.credit-services h3 {
+  letter-spacing: 2.3px;
+}
+
+.credit-text {
+  margin-top: 11px;
+}
+
+.send-request {
+  width: 195px;
+  padding: 10px 0;
 }
 /*index styles*/
 
