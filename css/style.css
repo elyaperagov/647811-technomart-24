@@ -274,6 +274,7 @@ h1{
   margin-left: 52px;
   margin-right: 70px;
   padding-top: 4px;
+  white-space: pre-wrap;
 }
 
 /*блок контактов*/
@@ -1162,6 +1163,8 @@ label:hover {
 .banners-button {
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: -0.3px;
+  text-align: center;
   text-transform: uppercase;
   width: 135px;
   padding: 11px 0;
@@ -1315,32 +1318,30 @@ label:hover {
 }
 
 .slide {
-    width: 620px;
-    height: 266px;
-    padding: 25px;
+  width: 620px;
+  height: 266px;
+  padding: 25px;
 }
 .slide-1 {
-    background-image: url('../img/slider-2.jpg');
-    background-color: #94842c;
+  background-image: url('../img/slider-2.jpg');
+  background-color: #94842c;
 }
 
 .slide-2 {
-    background-image: url('../img/slider-1.jpg');
-    background-color: #307498;
+  background-image: url('../img/slider-1.jpg');
+  background-color: #307498;
 }
 .slide-title {
-    font-size: 36px;
-    font-weight: 400;
-    top: 25px;
-    left: 25px;
-    z-index: 3;
-    letter-spacing: 0.7px;
+  font-size: 36px;
+  font-weight: 400;
+  top: 25px;
+  left: 25px;
+  z-index: 3;
+  letter-spacing: 0.7px;
 }
 .slide-sub-title {
-    font-size: 18px;
-    font-weight: 400;
-    top: 57px;
-    left: 25px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 
@@ -1576,12 +1577,9 @@ label:hover {
   padding-bottom: 5px;
 }
 /*---СЕРВИСЫ---*/
-.information p {
-  font-family: 'PT Sans', Arial, sans-serif;
-  padding: 14px 0;
-}
-
 .services-desc {
+  font-family: 'PT Sans', Arial, sans-serif;
+  padding: 15px 0;
   margin-top: 14px;
   letter-spacing: 0.04px;
 }
@@ -1632,15 +1630,10 @@ label:hover {
   top: -10px;
 }
 .services-item {
-  padding: 16px 22px 19px;
+  padding: 16px 22px 20px;
   background: #32425c;
   cursor: pointer;
 }
-/*
-.services-list li:nth-child(2) {
-  padding: 18px 22px 20px;
-}*/
-
 
 .services-active {
   background-color: #fff;
@@ -1669,52 +1662,64 @@ label:hover {
   display: block;
 }
 
-/*---ДОСТАВКА---*/
-.delivery-services {
+.delivery-services,
+.guaranty-services,
+.credit-services {
   margin-left: 80px;
   margin-top: 40px;
+  min-height: 288px;
+}
+/*---ДОСТАВКА---*/
+.delivery-services {
   background-image: url('../img/truck.png');
   background-repeat: no-repeat;
-  background-position: 150px 27px;
+  background-position: 152px 25px;
   width: 830px;
-  padding-bottom: 97px;
+}
+
+.delivery-text {
+  padding: 13px 0 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  letter-spacing: 0.1px;
+  margin-bottom: 0;
+  max-width: 280px;
 }
 /*---ГАРАНТИЯ---*/
 .guaranty-services {
-  margin-left: 75px;
-  margin-top: 27px;
   background-image: url('../img/guaranty.png');
   background-repeat: no-repeat;
-  background-position: 245px 18px;
+  background-position: 240px 5px;
   width: 830px;
-  padding-bottom: 97px;
 }
 
-.guaranty-services h3 {
-  letter-spacing: 3.4px;
+.guaranty-text {
+  padding: 13px 0 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  margin-bottom: 0;
+  max-width: 385px;
 }
+
+.guaranty-text span {
+  letter-spacing: 0.1px;
+}
+
 /*---КРЕДИТ---*/
 .credit-services {
-  margin-left: 82px;
-  margin-top: 42px;
   background-image: url('../img/credit.png');
   background-repeat: no-repeat;
   background-position: 165px 0px;
   width: 830px;
-  padding-bottom: 97px;
-}
-
-.credit-services h3 {
-  letter-spacing: 2.3px;
 }
 
 .credit-text {
-  margin-top: 11px;
+  margin: 25px 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  max-width: 280px;
 }
 
 .send-request {
   width: 195px;
-  padding: 10px 0;
+  padding: 11px 0;
 }
 /*index styles*/
 
@@ -1725,11 +1730,12 @@ label:hover {
 .technomart-about {
   width: 535px;
   margin-right: 120px;
-  margin-top: 82px;
+  margin-top: 78px;
 }
 
 .about-company p{
   font-family: 'PT Sans', Arial, sans-serif;
+  padding: 12px 0 11px;
   letter-spacing: 0.12px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -1740,12 +1746,6 @@ label:hover {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-}
-
-.technomart-about .technomart-desc {
-  padding-top: 11px;
-  padding-bottom: 10px;
-  letter-spacing: 0.06px;
 }
 
 .partners p{
@@ -1774,9 +1774,6 @@ label:hover {
 .about-us {
   width: 220px;
   margin-top: 25px;
-}
-
-.about-company .about-us {
   display: flex;
   justify-content: center;
   background: #ee3643;
@@ -1794,7 +1791,11 @@ label:hover {
 /*контакты*/
 .index-contacts {
   width: 300px;
-  margin-top: 82px;
+  margin-top: 78px;
+}
+
+.how-to-pickup {
+  max-width: 180px;
 }
 
 .index-contacts p{
@@ -1802,10 +1803,10 @@ label:hover {
   letter-spacing: 0;
 }
 
-.about-company .write-us {
+.write-us {
   width: 300px;
-  margin-top: 30px;
   padding: 11px 0 11px 5px;
+  margin-top: 32px;
 }
 .map-popup {
   cursor: pointer;
@@ -1906,6 +1907,9 @@ label:hover {
   flex-direction: row;
 }
 
+.rights {
+  max-width: 250px;
+}
 .rights,
 .footer-background {
   padding-top: 40px;
@@ -1941,12 +1945,19 @@ label:hover {
   background-color: #ee3643;
   border-radius: 50%;
 }
+
 .footer-background {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .background {
-  padding-right: 52px;
+  margin-right: 50px;
+}
+
+.background,
+.footer-copyright {
+  max-width: 140px;
 }
 
 /*эффекты обратной связи в футере*/
