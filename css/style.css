@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 940px;
   margin: 0;
@@ -9,6 +13,12 @@ body {
   font-weight: normal;
   color: #000000;
   background-color: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /*общие*/
@@ -27,30 +37,11 @@ a {
   cursor: pointer;
 }
 
-a:visited {
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
-button {
-  cursor: pointer;
-}
-
-h3 {
-  font-family: 'Cuprum', Arial, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 
 .red-button {
   background: #ee3643;
@@ -60,6 +51,7 @@ h3 {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .flex-row {
@@ -74,7 +66,6 @@ h3 {
   margin-right: auto;
   margin-left: auto;
 }
-
 /*хэдер*/
 .page-header {
   background-color: #f3f7f9;
@@ -257,24 +248,21 @@ h3 {
   flex-direction: row;
 }
 /*заголовок*/
-
-h1{
+.title {
+  width: 240px;
   max-height: 70px;
+  margin-left: 52px;
+  margin-right: 70px;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 4px;
+  white-space: pre-wrap;
   overflow: hidden;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
   font-style: italic;
   color: #ee3643;
-}
-.title {
-  width: 240px;
-  margin-left: 52px;
-  margin-right: 70px;
-  padding-top: 4px;
-  white-space: pre-wrap;
 }
 
 /*блок контактов*/
@@ -732,6 +720,7 @@ fieldset {
   border: solid #e5e5e5 1px;
   border-radius: 5px;
   padding: 10px 38px;
+  cursor: pointer;
 }
 
 .manufacturers-item:hover path,
@@ -985,7 +974,78 @@ label:hover {
   transform: translateX(2px);
 }
 
-/*cart-options*/
+/*всплывающие кнопки купить и в закладки*/
+.cart-actions {
+  display: none;
+  position: absolute;
+  width: 164px;
+  top: 0;
+  left: 0;
+  padding: 44px 42px 0;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.item-button {
+  display: block;
+  width: 135px;
+  margin-bottom: 8px;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.catalog-item-image:hover .cart-actions {
+  display: block;
+}
+.buy-submit {
+  position: relative;
+  padding: 10px 0;
+  color: #ffffff;
+  box-shadow: inset 0 -3px 0 #367315;
+  background-color: #63a63e;
+}
+
+.buy-submit svg {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+}
+
+.bookmarks-submit {
+  padding: 7px 0;
+  color: #32425c;
+  border: 3px solid #63a63e;
+}
+
+.buy-submit:hover {
+  background-color: #5fbb2d;
+}
+.catalog-item-image:hover .bosch-img {
+  visibility: hidden;
+}
+
+.buy-submit:hover circle,
+.buy-submit:hover path {
+  fill: #ffffff;
+}
+.buy-submit:active {
+  background-color: #518534;
+}
+
+.bookmarks-submit:hover {
+  color: #32425c;
+  border: solid #32425c;
+}
+.bookmarks-submit:active {
+  color: #c1c6ce;
+  border: solid #c1c6ce;
+}
+/*
 .cart-options {
   position: absolute;
   top: 45px;
@@ -1009,14 +1069,6 @@ label:hover {
   text-align: center;
   color: #ffffff;
   border: 0px;
-}
-.cart-options .buy-submit {
-  background: #63a63e;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  border-bottom: #367315;
-  border-bottom: 3px solid #367315;
-  position: relative;
 }
 
 .buy-submit svg {
@@ -1042,27 +1094,7 @@ label:hover {
 .catalog-item-image:hover .cart-options {
   opacity: 1;
   visibility: visible;
-}
-.cart-options .buy-submit:hover {
-  background-color: #5fbb2d;
-}
-
-.cart-options .buy-submit:hover circle,
-.cart-options .buy-submit:hover path {
-  fill: #ffffff;
-}
-.cart-options .buy-submit:active {
-  background-color: #518534;
-}
-
-.cart-options .bookmarks-submit:hover {
-  color: #32425c;
-  border: solid #32425c;
-}
-.cart-options .bookmarks-submit:active {
-  color: #c1c6ce;
-  border: solid #c1c6ce;
-}
+}*/
 
 .catalog-pagination {
   display: flex;
@@ -1109,6 +1141,10 @@ label:hover {
   padding-bottom: 29px;
   margin: 0 auto;
   letter-spacing: 0.1px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .catalogue-comments {
   background: #f2f6f8;
@@ -1590,6 +1626,10 @@ label:hover {
 .services h3 {
   margin: 0;
   padding: 0;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .services {
   margin-top: 70px;
@@ -1745,7 +1785,15 @@ label:hover {
   margin-bottom: 13px;
   font-size: 30px;
   line-height: 30px;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
+}
+/*---ПАРТНЕР---*/
+.partners {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .partners p{
@@ -1804,8 +1852,10 @@ label:hover {
 }
 
 .write-us {
+  display: block;
   width: 300px;
-  padding: 11px 0 11px 5px;
+  text-align: center;
+  padding: 11px 0px 11px 5px;
   margin-top: 32px;
 }
 .map-popup {
@@ -1976,7 +2026,7 @@ label:hover {
   position: fixed;
   color: #000000;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal-cart {
@@ -2085,6 +2135,7 @@ label:hover {
   margin-bottom: 29px;
   margin-left: 10px;
   padding-left: 0px;
+  cursor: pointer;
 }
 
 /*карта*/
@@ -2107,7 +2158,7 @@ label:hover {
   font-size: 18px;
   line-height: 18px;
   width: 620px;
-  bottom: 300px;
+  top: 15%;
   left: 50%;
   margin-left: -310px;
   box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
