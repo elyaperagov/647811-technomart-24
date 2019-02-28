@@ -37,12 +37,6 @@ a {
   cursor: pointer;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .red-button {
   background: #ee3643;
   border-radius: 3px;
@@ -75,6 +69,12 @@ ul {
 /*верхнее меню*/
 .header-top-menu {
   background-color: #293449;
+}
+
+.header-top-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .top-menu {
@@ -200,7 +200,6 @@ ul {
   background-color: #b92732;
 }
 
-
 /*поиск*/
 .search input {
   width: 270px;
@@ -317,6 +316,9 @@ ul {
   height: 45px;
   width: 300px;
   position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .logout-button:focus {
   outline: 3px solid orange;
@@ -338,7 +340,9 @@ ul {
 }
 .profile-items {
   width: 300px;
-  padding-top: 6px;
+  padding: 6px 0 0 0;
+  margin: 0;
+  list-style: none;
 }
 .profile-items a{
   font-size: 16px;
@@ -442,6 +446,12 @@ ul {
   margin-top: 39px;
 }
 
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .site-navigation {
   display: flex;
   width: 100%;
@@ -504,7 +514,9 @@ ul {
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding-top: 18px;
+  margin-top: 18px;
+  padding-left: 0px;
+  list-style: none;
 }
 
 .breadcrumbs li:last-child,
@@ -513,7 +525,7 @@ ul {
   font-style:normal;
   font-size: 13px;
   line-height: 18px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.25px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -552,7 +564,7 @@ ul {
   margin-bottom: 0;
 }
 
-/*фильтры*/
+/*---ФИЛЬТРЫ---*/
 fieldset {
    border: 0 none;
    padding: 0px;
@@ -574,7 +586,7 @@ fieldset {
   font-family: 'PT Sans', 'Arial', sans-serif;
   text-transform: uppercase;
 }
-
+/*---ФИЛЬТР ЦЕНЫ---*/
 .filter-controls {
   position: relative;
   width: 220px;
@@ -675,8 +687,15 @@ fieldset {
 
 .supply {
   padding-top: 19px;
+  letter-spacing: 0.25px;
 }
 
+.manufacturers-list,
+.supply-types {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .manufacturers-list li:last-child {
   padding-bottom: 22px;
 }
@@ -740,6 +759,7 @@ fieldset {
 .supply-types label {
   display: flex;
   align-items: center;
+  letter-spacing: 0.25px;
 }
 label:hover {
   cursor: pointer;
@@ -818,6 +838,7 @@ label:hover {
   background: #f7f3ec;
   text-transform: uppercase;
   width: 700px;
+  list-style: none;
 }
 
 .arrangement-item a{
@@ -873,6 +894,7 @@ label:hover {
 .main-content {
   display: flex;
 }
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -984,6 +1006,7 @@ label:hover {
   padding: 44px 42px 0;
   z-index: 1;
   background-color: #fff;
+  list-style: none;
 }
 
 .item-button {
@@ -1099,8 +1122,10 @@ label:hover {
 .catalog-pagination {
   display: flex;
   flex-direction: row;
-  margin-left: 18px;
+  margin-left: 19px;
   margin-top: 41px;
+  list-style: none;
+  padding: 0;
 }
 
 .pagination-item {
@@ -1114,7 +1139,7 @@ label:hover {
   background-color: #ffffff;
   text-align: center;
   border-radius: 5px;
-  margin-right: 8px;
+  margin-right: 9px;
   padding: 10px 0;
   cursor: pointer;
   outline: none;
@@ -1148,7 +1173,7 @@ label:hover {
 }
 .catalogue-comments {
   background: #f2f6f8;
-  margin: 60px auto 0px auto;
+  margin: 47px auto 0px auto;
   padding-top: 67px;
   padding-bottom: 68px;
 }
@@ -1182,6 +1207,13 @@ label:hover {
   flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.column {
+  padding: 0;
+  list-style: none;
 }
 
 .banners-item {
@@ -1562,6 +1594,9 @@ label:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .popular-manufacturers-item {
   width: 220px;
@@ -1616,13 +1651,14 @@ label:hover {
 .services-desc {
   font-family: 'PT Sans', Arial, sans-serif;
   padding: 15px 0;
-  margin-top: 14px;
+  margin-top: 13px;
   letter-spacing: 0.04px;
 }
 
 .services-wrapper {
   background-color: #f4f7f9;
 }
+
 .services h3 {
   margin: 0;
   padding: 0;
@@ -1653,6 +1689,7 @@ label:hover {
   font-weight: bold;
   margin: 0;
   padding: 0;
+  list-style: none;
   width: 320px;
   border: none;
   position: relative;
@@ -1767,6 +1804,13 @@ label:hover {
   display: flex;
   flex-direction: row;
 }
+
+.about-company ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .technomart-about {
   width: 535px;
   margin-right: 120px;
@@ -1821,7 +1865,7 @@ label:hover {
 /*кнопка подробнее о компании*/
 .about-us {
   width: 220px;
-  margin-top: 25px;
+  margin-top: 26px;
   display: flex;
   justify-content: center;
   background: #ee3643;
@@ -1847,7 +1891,7 @@ label:hover {
 }
 
 .index-contacts p{
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   letter-spacing: 0;
 }
 
@@ -1883,7 +1927,7 @@ label:hover {
 }
 
 .footer-info .address {
-  margin-bottom: 47px;
+  margin-bottom: 50px;
   margin-top: 33px;
   margin-left: 3px;
   color: #ffffff;
@@ -1896,11 +1940,14 @@ label:hover {
   flex-direction: column;
 }
 
+
 .footer-navigation-items {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding-top: 38px;
+  list-style: none;
+  margin: 0;
 }
 
 .footer-catalogue-items {
@@ -1908,6 +1955,8 @@ label:hover {
   flex-direction: row;
   justify-content: flex-end;
   padding-top: 34px;
+  list-style: none;
+  margin: 0;
 }
 .footer-navigation-items li:not(:first-child) {
   margin-left: 59px;
@@ -1955,22 +2004,29 @@ label:hover {
   color: white;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 37px;
+  padding-bottom: 37px;
 }
 
 .rights {
-  max-width: 250px;
+  margin: 0 0 0 2px;
+  min-width: 230px;
 }
+/*
 .rights,
 .footer-background {
   padding-top: 40px;
   padding-bottom: 35px;
-}
+}*/
 
 /*иконки соцсетей*/
 .footer-social-items {
   display: flex;
   cursor: pointer;
-  padding: 37px 120px 31px 160px;
+  padding: 0px 80px 0 154px;
+  list-style: none;
+  margin: -2px 0 0 0;
 }
 
 .social-button {
@@ -2000,14 +2056,11 @@ label:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  list-style: none;
+  margin: 0;
 }
 .background {
   margin-right: 50px;
-}
-
-.background,
-.footer-copyright {
-  max-width: 140px;
 }
 
 /*эффекты обратной связи в футере*/
@@ -2086,6 +2139,13 @@ label:hover {
 .modal-close:after {
   transform: rotate(-45deg);
 }
+
+.modal-order-sent ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .modal-order-sent li{
   font-size: 30px;
   line-height: 30px;
