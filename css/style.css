@@ -918,9 +918,8 @@ label:hover {
   list-style: none;
 }
 
-.arrangement-item {
-  display: inline-block;
-  vertical-align: middle;
+.arrangement-item-arrow {
+  font-size: 0;
 }
 
 .filters-background {
@@ -1549,6 +1548,7 @@ label:hover {
   z-index: 3;
 }*/
 
+
 .for-icons::before {
   content: '';
   position: absolute;
@@ -1559,6 +1559,7 @@ label:hover {
   left: 22px;
   z-index: 2;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 
 .for-icons::after {
@@ -1571,6 +1572,7 @@ label:hover {
   left: 22px;
   z-index: 2;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 .for--icons::before {
   content: '';
@@ -1582,6 +1584,7 @@ label:hover {
   top: 140px;
   z-index: 2;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 .for--icons::after {
   content: '';
@@ -1593,6 +1596,7 @@ label:hover {
   top: 122px;
   z-index: 2;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 .for-slider {
   position: absolute;
@@ -2183,7 +2187,7 @@ label:hover {
   padding: 0px 80px 0 154px;
   list-style: none;
   margin: -2px 0 0 0;
-  font-size: 0
+  font-size: 0;
 }
 
 .social-button {
@@ -2298,8 +2302,6 @@ label:hover {
 }
 
 .modal-order-sent ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -2308,19 +2310,21 @@ label:hover {
   line-height: 30px;
   margin: 0;
 }
-
+/*----ТОВАР ДОБАВЛЕГ В КОРЗИНУ---*/
 .item-placed {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 80px;
+  padding: 0 82px;
+  margin: 0;
+  list-style: none;
 }
 .item-placed li {
   margin-right: 34px;
   margin-bottom: 42px;
 }
 .item-placed li+li {
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .cart-modal-options {
@@ -2351,7 +2355,7 @@ label:hover {
   margin-top: 39px;
   margin-bottom: 29px;
   margin-left: 10px;
-  padding-left: 0px;
+  padding-left: 2px;
   cursor: pointer;
 }
 
