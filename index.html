@@ -80,7 +80,7 @@
   <main>
     <section class="main-content index-page container">
       <ul class="banners-list">
-        <li class="banners-item materials no-left-space">Материалы<a href="#" class="banners-button for-materials"><span>На любой вкус</span></a></li>
+        <li class="banners-item materials no-left-space">Материалы<a href="#" class="banners-button for-materials">На любой вкус</a></li>
         <li class="banners-item instruments">Инструмент<a href="#" class="banners-button for-instruments">На все случаи</a></li>
         <li class="banners-item equipment no-right-space">Техника<a href="#" class="banners-button for-equipment">Для стройки</a></li>
         <li class="banners-item slider no-left-space">
@@ -241,17 +241,6 @@
         <a class="popular-manufacturers-item" href="#"><img src="img/AEG.jpg" alt="Производитель AEG" width="151" height="96"></a>
         <a class="popular-manufacturers-item" href="#"><img class="metabo-manufacturer-img" src="img/Metabo.jpg" alt="Производитель Metabo" width="208" height="70"></a>
       </div>
-    <!--    <a class="popular-manufacturers-item" href="#"><img src="img/bosch.jpg" alt="Производитель Bosch" width="126" height="37"></a>-->
-      <!--   <ul class="popular-manufacturers-list">
-        <li class="popular-manufacturers-item"><a href="#"><img src="img/bosch.jpg" alt="Производитель Bosch" width="126" height="37"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img src="img/makita.jpg" alt="Производитель Makita" width="123" height="40"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img src="img/DeWALT.jpg" alt="Производитель DeWALT" width="146" height="44"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img class="interskol-manufacturer-img" src="img/INTERSKOL.jpg" alt="Производитель Интерскол" width="200" height="88"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img class="hitachi-manufacturer-img" src="img/Hitachi.jpg" alt="Производитель Hitachi" width="175" height="38"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img src="img/LG.jpg" alt="Производитель LG" width="121" height="73"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img src="img/AEG.jpg" alt="Производитель AEG" width="151" height="96"></a></li>
-        <li class="popular-manufacturers-item"><a href="#"><img class="metabo-manufacturer-img" src="img/Metabo.jpg" alt="Производитель Metabo" width="208" height="70"></a></li>
-      </ul>-->
     </section>
     <section class="information">
       <div class="services-wrapper">
@@ -260,16 +249,11 @@
           <p class="services-desc">Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="all-services">
-        <!--   <ul class="services-list">
-            <li class="services-item delivery-link services-active">Доставка</li>
-            <li class="services-item guaranty-link services-not-active">Гарантия</li>
-            <li class="services-item credit-link services-not-active">Кредит</li>
-          </ul>-->
-         <div class="services-list">
-            <a class="services-item delivery-link services-active" href="#">Доставка</a>
-            <a class="services-item guaranty-link services-not-active" href="#">Гарантия</a>
-            <a class="services-item credit-link services-not-active" href="#">Кредит</a>
-          </div>
+         <ul class="services-list">
+            <li tabindex="0" class="services-item delivery-link services-active" href="#">Доставка</li>
+            <li tabindex="0" class="services-item guaranty-link services-not-active" href="#">Гарантия</li>
+            <li tabindex="0" class="services-item credit-link services-not-active" href="#">Кредит</li>
+          </ul>
           <div class="delivery-services services-shown">
             <h3>Доставка</h3>
             <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо
@@ -307,8 +291,8 @@
       <div class="index-contacts">
         <h3>Контакты</h3>
         <p class="how-to-pickup">Вы можете забрать товар сами, заехав в наш офис:</p>
-        <img tabindex="0" class="map-popup" src="img/map.jpg" alt="карта" width="300" height="158">
-        <a tabindex="0" class="red-button write-us">Заблудились? Напишите нам!</a>
+        <a href="#"><img class="map-popup" src="img/map.jpg" alt="Расположение на карте: Большая Конюшенная ул., 19" width="300" height="158"></a>
+        <a href="#" class="red-button write-us">Заблудились? Напишите нам!</a>
       </div>
     </div>
   </section>
@@ -374,16 +358,16 @@
     <form method="post" name="write-us-form" class="write-us-form" action="https://echo.htmlacademy.ru">
       <div class="form-container">
         <p>
-          <label for="name">Ваше имя</label><br>
+          <label for="name">Ваше имя</label>
           <input type="text" name="name" placeholder="Имя Фамилия" id="name" class="name">
         </p>
         <p>
-        <label for="e-mail">Ваш e-mail</label><br>
+        <label for="e-mail">Ваш e-mail</label>
           <input type="text" name="e-mail" placeholder="email@example.com" id="e-mail" class="e-mail">
         </p>
       </div>
     <p class="textarea-title">Текст письма</p>
-    <textarea rows="10" cols="45" name="text" class="form-text" placeholder="В свободной форме"></textarea><br>
+    <textarea rows="10" cols="45" name="text" class="form-text" placeholder="В свободной форме"></textarea>
     <div class="feedback-button-wrapper">
       <button type="submit" class="red-button feedback-button">Отправить</button>
       <button type="button" class="modal-close">Закрыть</button>

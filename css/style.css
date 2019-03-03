@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -18,7 +19,8 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /*общие*/
@@ -49,10 +51,18 @@ a {
 }
 
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items:center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
 }
 
 .container {
@@ -78,10 +88,18 @@ a {
 }
 
 .top-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 17px;
   line-height: 28px;
   font-weight: 400;
@@ -127,9 +145,13 @@ a {
 }
 /*верхнее правое меню*/
 .top-right-menu {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 42px;
 }
 .menu-item {
@@ -165,15 +187,23 @@ a {
 }
 /*верхнее левое меню*/
 .top-left-menu {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
 }
 /*логотип*/
 .logo {
   position: relative;
   width: 220px;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 24px;
   color: #ffffff;
   line-height: 24px;
@@ -243,8 +273,13 @@ a {
 .menu-container {
   position: relative;
   margin-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*заголовок*/
 .title {
@@ -267,8 +302,13 @@ a {
 /*блок контактов*/
 .contacts {
   width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .phone-number {
   width: 100%;
@@ -276,7 +316,8 @@ a {
   padding: 10px 0 10px 22px;
   border: 3px solid white;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 21px;
   line-height: 21px;
@@ -300,8 +341,13 @@ a {
 }
 /*польз. навигация в каталоге*/
 .user-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 51px;
 }
 
@@ -367,9 +413,15 @@ a {
 /*вход- регистрация на главной*/
 .login-items {
   margin-left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin-bottom: 30px;
 }
 
@@ -437,81 +489,8 @@ a {
 .profile-items a:active {
   color: #c5c5c5;
 }
-/*навигация*/
-/*
-.main-navigation {
-  width: 940px;
-  font-size: 0;
-  background-color: #32425c;
-  margin-top: 37px;
-}
+/*-----навигация---*/
 
-.main-navigation ul {
-  padding: 0;
-  text-align: center;
-}
-
-.main-navigation li {
-  display: inline-block;
-  vertical-align: middle;
-  list-style: none;
-  padding: 20px 30.5px 18px 29px;
-}
-
-.nav-link-index {
-  padding: 19px 35px 18px 50px;
-}
-
-.nav-link-contacts {
-  padding: 19px 55px 18px 33px;
-}
-
-.main-navigation a {
-  font-size: 17px;
-  line-height: 17px;
-  color: #fff;
-  display: block;
-}
-
-.main-navigation li:hover {
-  background-color: #2c384f;
-}
-
-.main-navigation li:active {
-  background-color: #222d41;
-}
-
-.site-navigation-item {
-  position: relative;
-  cursor: pointer;
-}
-.site-navigation-item::after {
-  content:'';
-  display:block;
-  background-color: #293449;
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  top: 100%;
-  left: 0;
-}
-
-.site-navigation-item:hover {
-  background-color: #293449;
-}
-
-.site-navigation-item:active {
-  background-color: #1d2739;
-}
-
-.site-navigation-item:active a{
-  color: #868c95;
-}
-
-.site-navigation-item:active:after {
-  background-color: #1d2739;
-}
-*/
 .main-navigation {
   font-size: 17px;
   line-height: 17px;
@@ -527,9 +506,14 @@ a {
 }
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 100%;
 }
 
@@ -555,19 +539,9 @@ a {
 .site-navigation-item {
   position: relative;
   cursor: pointer;
-  box-shadow: inset 0 -5px 0 0 #293449;
+  -webkit-box-shadow: inset 0 -5px 0 0 #293449;
+          box-shadow: inset 0 -5px 0 0 #293449;
 }
-/*
-.site-navigation-item::after {
-  content:'';
-  display:block;
-  background-color: #293449;
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  top: 100%;
-  left: 0;
-}*/
 
 .site-navigation-item:hover {
   background-color: #293449;
@@ -575,23 +549,29 @@ a {
 
 .site-navigation-item:active {
   background-color: #1d2739;
-  box-shadow: inset 0 -5px 0 0 #1d2739;
+  -webkit-box-shadow: inset 0 -5px 0 0 #1d2739;
+          box-shadow: inset 0 -5px 0 0 #1d2739;
 }
 
 .site-navigation-item:active a{
   color: #868c95;
 }
-/*
-.site-navigation-item:active:after {
-  background-color: #1d2739;
-}*/
 
 /*хлебные крошки*/
 .breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin-top: 18px;
   padding-left: 0px;
@@ -633,8 +613,12 @@ a {
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 27px;
   color: #32425c;
   background-color: #f2f6f8;
@@ -682,6 +666,9 @@ fieldset {
   position: absolute;
   top: 49%;
   left: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(80%, #6ce6a6), color-stop(20%, #d7dcde));
+  background-image: -webkit-linear-gradient(left, #6ce6a6 80%, #d7dcde 20%);
+  background-image: -o-linear-gradient(left, #6ce6a6 80%, #d7dcde 20%);
   background-image: linear-gradient(to right, #6ce6a6 80%, #d7dcde 20%);
 }
 
@@ -706,9 +693,15 @@ fieldset {
 }
 
 .filter-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 25px;
 }
 
@@ -836,8 +829,12 @@ fieldset {
 /*стили чекбоксов*/
 .manufacturers-list label,
 .supply-types label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 0.25px;
 }
 label:hover {
@@ -908,9 +905,15 @@ label:hover {
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -930,13 +933,16 @@ label:hover {
   display: block;
   outline: inherit;
   text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: red;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
 }
 .arrangement-item a:hover{
   color: #000000;
   text-decoration: underline;
-  text-decoration-color: red;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
 }
 .arrangement-item a:active{
   color: red;
@@ -979,12 +985,17 @@ label:hover {
 
 /*---КАТАЛОГ---*/
 .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .catalog--list {
@@ -997,10 +1008,19 @@ label:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #e5e5e5;
   overflow: hidden;
 }
@@ -1046,7 +1066,8 @@ label:hover {
 }
 
 .catalog-item:hover {
-  box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
+  -webkit-box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
+          box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
 }
 
 .catalog-item-title {
@@ -1090,7 +1111,9 @@ label:hover {
   text-decoration: line-through;
   color: #999999;
   letter-spacing: 0.4px;
-  transform: translateX(2px);
+  -webkit-transform: translateX(2px);
+      -ms-transform: translateX(2px);
+          transform: translateX(2px);
 }
 
 /*всплывающие кнопки купить и в закладки*/
@@ -1126,7 +1149,8 @@ label:hover {
   position: relative;
   padding: 10px 0;
   color: #ffffff;
-  box-shadow: inset 0 -3px 0 #367315;
+  -webkit-box-shadow: inset 0 -3px 0 #367315;
+          box-shadow: inset 0 -3px 0 #367315;
   background-color: #63a63e;
 }
 
@@ -1165,60 +1189,15 @@ label:hover {
   color: #c1c6ce;
   border: solid #c1c6ce;
 }
-/*
-.cart-options {
-  position: absolute;
-  top: 45px;
-  left: 42px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all .3s ease;
-  background: #ffffff;
-}
-
-.cart-options button {
-  width: 135px;
-  height: 41px;
-  line-height: 18px;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  border: 0px;
-}
-
-.buy-submit svg {
-  position: absolute;
-  top: 11px;
-  left: 14px;
-}
-
-.cart-options .bookmarks-submit {
-  border: 3px solid #63a63e;
-  border-radius: 5px;
-  background: #ffffff;
-}
-
-.bookmarks-submit span {
-  color: #32425c;
-}
-
-.catalog-item-image:hover .bosch-img {
-  visibility: hidden;
-}
-
-.catalog-item-image:hover .cart-options {
-  opacity: 1;
-  visibility: visible;
-}*/
 
 .catalog-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-left: 19px;
   margin-top: 41px;
   list-style: none;
@@ -1288,8 +1267,13 @@ label:hover {
 }
 /* основной контент на главной */
 .index-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .banners-list {
@@ -1298,9 +1282,15 @@ label:hover {
   font-weight: bold;
   color: white;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 32px;
   padding: 0;
@@ -1457,7 +1447,8 @@ label:hover {
   width: 10px;
   height: 10px;
   cursor: pointer;
-  box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.8);
   border-radius: 50%;
   border: 2px solid white;
   background: white;
@@ -1470,14 +1461,20 @@ label:hover {
 }
 
 #btn-1:checked ~  .slider-slides {
-  transform: translate(0);
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
 }
 #btn-2:checked ~  .slider-slides {
-  transform: translate(-620px);
+  -webkit-transform: translate(-620px);
+      -ms-transform: translate(-620px);
+          transform: translate(-620px);
 }
 
 .slider-slides {
   width: 200%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1508,45 +1505,6 @@ label:hover {
   font-weight: 400;
 }
 
-
-/*
-.drills-slider {
-  position: relative;
-}
-
-.drills-slider::before {
-  content: 'ДРЕЛИ';
-  position: absolute;
-  font-size: 36px;
-  font-weight: 400;
-  top: 25px;
-  left: 25px;
-  z-index: 3;
-  letter-spacing: 0.7px;
-}
-
-.drills-slider::after {
-  content: 'Соседям на радость!';
-  position: absolute;
-  font-size: 18px;
-  font-weight: 400;
-  top: 57px;
-  left: 25px;
-  z-index: 3;
-}
-*/
-/*
-.slider-slides::after {
-  content: 'Соседям на радость!';
-  position: absolute;
-  font-size: 18px;
-  font-weight: 400;
-  top: 57px;
-  left: 25px;
-  z-index: 3;
-}*/
-
-
 .for-icons::before {
   content: '';
   position: absolute;
@@ -1556,7 +1514,9 @@ label:hover {
   top: 122px;
   left: 22px;
   z-index: 2;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   cursor: pointer;
 }
 
@@ -1569,7 +1529,9 @@ label:hover {
   top: 140px;
   left: 22px;
   z-index: 2;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   cursor: pointer;
 }
 .for--icons::before {
@@ -1581,7 +1543,9 @@ label:hover {
   right: 18px;
   top: 140px;
   z-index: 2;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   cursor: pointer;
 }
 .for--icons::after {
@@ -1593,7 +1557,9 @@ label:hover {
   right: 18px;
   top: 122px;
   z-index: 2;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   cursor: pointer;
 }
 .for-slider {
@@ -1607,35 +1573,15 @@ label:hover {
   bottom: 22px;
   z-index: 2;
 }
-/*
-.perforators-slider {
-  position: relative;
-}
-
-.perforators-slider::before {
-  content: 'ПЕРФОРАТОРЫ';
-  position: absolute;
-  font-size: 36px;
-  font-weight: 400;
-  top: 25px;
-  left: 25px;
-  z-index: 3;
-  letter-spacing: 0.7px;
-}
-
-.perforators-slider::after {
-  content: 'Настоящие мужские игрушки';
-  position: absolute;
-  font-size: 18px;
-  font-weight: 400;
-  top: 57px;
-  left: 25px;
-  z-index: 3;
-}*/
 
 .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .discounts {
@@ -1694,10 +1640,18 @@ label:hover {
 }
 
 .popular-manufacturers-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .popular-manufacturers-item {
@@ -1709,13 +1663,15 @@ label:hover {
   cursor: pointer;
 }
 .popular-manufacturers-item:hover {
-  box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
+  -webkit-box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
+          box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
 }
 .popular-manufacturers-item:active img {
   opacity: 0.3;
 }
 .popular-manufacturers-item:active {
-  box-shadow: 0 4px 10px 0px rgba(41, 52, 73, .5);
+  -webkit-box-shadow: 0 4px 10px 0px rgba(41, 52, 73, .5);
+          box-shadow: 0 4px 10px 0px rgba(41, 52, 73, .5);
 }
 
 .popular-manufacturers-list li:nth-child(4n+1) {
@@ -1733,56 +1689,7 @@ label:hover {
   bottom: 5px;
   right: 0;
 }
-/*---ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ__
-.popular-manufacturers {
-  padding: 34px 0 28px 23px;
-}
-.popular-manufacturers-ref {
-  padding: 11px 68px 10px 69px;
-}
-
-.popular-manufacturers-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.popular-manufacturers-item {
-  width: 220px;
-  position: relative;
-  height: 145px;
-  border: solid #eaeaea 1px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.popular-manufacturers-item:hover {
-  box-shadow: 0 10px 25px 0px rgba(41, 52, 73, .5);
-}
-.popular-manufacturers-item:active img {
-  opacity: 0.3;
-}
-.popular-manufacturers-item:active {
-  box-shadow: 0 4px 10px 0px rgba(41, 52, 73, .5);
-}
-
-.popular-manufacturers-list li:nth-child(4n+1) {
-  margin-left: 0;
-}
-.popular-manufacturers-list li:nth-child(4n+4) {
-  margin-right: 0;
-}
-
-.popular-manufacturers-item img {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  top: 0;
-  bottom: 5px;
-  right: 0;
-}*/
+/*---ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ__*/
 
 .interskol-manufacturer-img {
   padding-bottom: 10px;
@@ -1818,12 +1725,17 @@ label:hover {
   text-transform: uppercase;
 }
 .services {
-  margin-top: 82px;
+  margin-top: 80px;
   padding-top: 72px;
 }
 .all-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .all-services h3 {
@@ -1836,25 +1748,19 @@ label:hover {
   font-family: 'Cuprum', 'Arial', sans-serif;
   font-size: 21px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 320px;
   position: relative;
-  padding-top: 43px;
-}
-/*
-.services-list {
-  font-family: 'Cuprum', 'Arial', sans-serif;
-  font-size: 21px;
-  font-weight: bold;
+  padding: 43px 0 0 0;
   margin: 0;
-  padding: 0;
   list-style: none;
-  width: 320px;
-  border: none;
-  position: relative;
-  padding-top: 43px;
-}*/
+}
 
 .services-list::after {
   content: '';
@@ -1875,14 +1781,16 @@ label:hover {
 
 .services-active {
   background-color: #fff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #32425c;
 }
 
 .services-not-active {
   color: #fff;
   background-color: #32425c;
-  box-shadow: inset 0 -1px #293449;
+  -webkit-box-shadow: inset 0 -1px #293449;
+          box-shadow: inset 0 -1px #293449;
 }
 
 .services-not-active:hover {
@@ -1959,8 +1867,13 @@ label:hover {
 /*index styles*/
 
 .about-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .about-company ul{
@@ -2024,8 +1937,12 @@ label:hover {
 .about-us {
   width: 220px;
   margin-top: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #ee3643;
   margin-bottom: 85px;
   padding: 11px 0;
@@ -2072,10 +1989,18 @@ label:hover {
   background: #32425c;
 }
 .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .logo-bottom {
   height: 63px;
@@ -2094,24 +2019,47 @@ label:hover {
 
 
 .footer-navigation-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 
 .footer-navigation-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-top: 38px;
   list-style: none;
   margin: 0;
 }
 
 .footer-catalogue-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-top: 34px;
   list-style: none;
   margin: 0;
@@ -2160,9 +2108,16 @@ label:hover {
 }
 .footer-feedback {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-top: 37px;
   padding-bottom: 37px;
 }
@@ -2171,15 +2126,11 @@ label:hover {
   margin: 0 0 0 2px;
   min-width: 230px;
 }
-/*
-.rights,
-.footer-background {
-  padding-top: 40px;
-  padding-bottom: 35px;
-}*/
 
 /*иконки соцсетей*/
 .footer-social-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   padding: 0px 80px 0 154px;
@@ -2212,9 +2163,16 @@ label:hover {
 }
 
 .footer-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
   margin: 0;
 }
@@ -2248,7 +2206,8 @@ label:hover {
   left: 50%;
   margin-left: -290px;
   padding-top: 55px;
-  box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
+  -webkit-box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
+          box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
 }
 
 .modal-cart:before {
@@ -2293,10 +2252,14 @@ label:hover {
 }
 
 .modal-close:before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .modal-close:after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .modal-order-sent ul {
@@ -2310,9 +2273,15 @@ label:hover {
 }
 /*----ТОВАР ДОБАВЛЕГ В КОРЗИНУ---*/
 .item-placed {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0 82px;
   margin: 0;
   list-style: none;
@@ -2326,13 +2295,21 @@ label:hover {
 }
 
 .cart-modal-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   background-color: #f1f1f1;
   text-transform: uppercase;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .place-order {
   margin-top: 39px;
@@ -2366,7 +2343,8 @@ label:hover {
   height: 450px;
   margin-left: -470px;
   margin-top: -225px;
-  box-shadow: 0 8px 16px 0 rgba(47,42,43, .5);
+  -webkit-box-shadow: 0 8px 16px 0 rgba(47,42,43, .5);
+          box-shadow: 0 8px 16px 0 rgba(47,42,43, .5);
 }
 
 /*всплывающая форма*/
@@ -2380,7 +2358,8 @@ label:hover {
   top: 15%;
   left: 50%;
   margin-left: -310px;
-  box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
+  -webkit-box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
+          box-shadow: 0 20px 40px 0px rgba(0,0,0, .75);
 }
 
 .feedback-form ::-webkit-input-placeholder {
@@ -2401,8 +2380,13 @@ label:hover {
 }
 
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 55px;
   margin-left: 80px;
   margin-right: 80px;
