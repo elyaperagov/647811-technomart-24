@@ -528,6 +528,8 @@ a {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 100%;
 }
 
@@ -537,7 +539,7 @@ a {
   height: 100%;
 }
 .nav-link-index {
-  padding: 19px 35px 18px 50px;
+  padding: 19px 34px 18px 50px;
 }
 
 .nav-link-contacts {
@@ -908,6 +910,7 @@ label:hover {
   line-height: 18px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -920,11 +923,6 @@ label:hover {
 
 .arrangement-item-arrow {
   font-size: 0;
-}
-
-.filters-background {
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .arrangement-item a{
@@ -945,7 +943,6 @@ label:hover {
   text-decoration: none;
 }
 
-
 .arrangement li:first-child {
   margin-right: 144px;
 }
@@ -954,13 +951,14 @@ label:hover {
   margin-right: 70px;
 }
 
-
- .arrangement li:nth-child(3) {
+.arrangement li:nth-child(3) {
   margin-right: 65px;
+ }
+.arrangement li:nth-child(4) {
+  margin-right: 45px;
  }
 
 .arrangement-item-svg-up {
-  margin-left: 47px;
   cursor: pointer;
 }
 
